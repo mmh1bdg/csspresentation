@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Nike</title>
+    <style>
+        .mTopDiv {
+            display: flex;
+            width: 100%;
+            height: 36px;
+
+        }
+
+        .mMiddleDiv {
+            display: flex;
+            width: 100%;
+            height: 56px;
+            /* border: solid; */
+            margin-top: 0.5%;
+        }
+
+        .mMarqueMenu {
+            display: flex;
+            width: 100%;
+            height: 56px;
+            /* border: solid; */
+            margin-top: 0.5%;
+            overflow: hidden;
+            white-space: nowrap;
+            align-items: center;
+        }
+
+        .mTopInnerDivLeft {
+            display: flex;
+            width: 50%;
+            background-color: rgb(244, 244, 244);
+            justify-content: start;
+        }
+
+        .mTopInnerDivRight {
+            display: flex;
+            width: 50%;
+            background-color: rgb(244, 244, 244);
+            justify-content: end;
+        }
+
+        .mMenuDiv {
+            display: flex;
+            width: 10%;
+            height: 35%;
+            border-right: solid;
+            border-width: 1px;
+
+            justify-content: end;
+            justify-content: space-around;
+            margin-top: 5px;
+            padding: 2px;
+        }
+
+        .mMenuMiddle {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1px;
+            padding: 1%;
+            font-weight: bold;
+
+        }
+
+        .mSearch {
+            display: flex;
+            justify-content: left;
+            margin-top: 1px;
+            padding: 1%;
+            /* font-weight: bold; */
+        }
+
+        .mRoundImage {
+
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            /* transform: translateY(-50%); */
+            object-fit: cover;
+            margin-top: 5px;
+
+
+        }
+
+        .mSearchText {
+            /* width: 100%; */
+            right: 10px;
+            padding: 10px 40px 10px 10px;
+            border-radius: 20px;
+            border: none;
+            /* box-sizing: border-box; */
+            text-align: center;
+            background-color: rgb(244, 244, 244);
+        }
+
+        .marquee-content {
+            display: flex;
+            flex-direction: row;
+            white-space: nowrap;
+            position: absolute;
+            animation: marquee 12s linear infinite;
+        }
+
+        .marquee-text {
+            padding: 0 20px;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInOut 6s linear infinite;
+
+        }
+
+        .marquee-text:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .marquee-text:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        .marquee-text:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        .marquee-text:nth-child(4) {
+            animation-delay: 9s;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes fadeInOut {
+
+            0%,
+            20% {
+                opacity: 0;
+            }
+
+            25%,
+            75% {
+                opacity: 1;
+            }
+
+            80%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .mJordanBig {
+            width: 8%;
+            height: auto;
+            object-fit: cover;
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+        }
+
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+        .y-shop-button {
+
+            background-color: black;
+            color: white;
+            margin: auto;
+            width: 85px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+
+        }
+
+        .y-comming-button {
+
+            background-color: black;
+            color: white;
+            margin: auto;
+            width: 160px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+
+        }
+
+        .y-advertise-1 {
+            width: 100%;
+            height: 100vh;
+            /* or any height you desire */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .y-advertise-1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .y-popular-items {
+            width: 100%;
+            /* height: auto; */
+        }
+
+        .y-popular-item {
+
+            width: 32%;
+            /* height: 45vh; */
+            /* overflow: hidden; */
+            margin-bottom: 20px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .y-popular-item img {
+            width: 100%;
+            /* height: %; */
+            object-fit: cover;
+        }
+
+        .y-margin-bottom {
+            margin-bottom: 20px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .mLargeImage {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+
+        }
+
+        /* Small devices (landscape phones, less than 768px) */
+        @media (max-width: 767px) {
+
+            .mTopDiv,
+            .mMiddleDiv,
+            .mMarqueMenu,
+            .mTopInnerDivLeft,
+            .mTopInnerDivRight,
+            .mMenuDiv,
+            .mMenuMiddle,
+            .mSearch,
+            .mRoundImage,
+            .mSearchText,
+            .marquee-content,
+            .marquee-text,
+            .mJordanBig,
+            .y-shop-button,
+            .y-comming-button,
+            .y-advertise-1,
+            .y-popular-items,
+            .y-popular-item,
+            .y-popular-item img,
+            .mLargeImage {
+                flex-direction: column;
+                /* Stack elements vertically */
+                align-items: center;
+                /* Center align elements */
+            }
+
+            .mTopInnerDivLeft,
+            .mTopInnerDivRight {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .mMenuDiv,
+            .mMenuMiddle,
+            .mSearch {
+                width: 100%;
+                justify-content: center;
+                padding: 5px;
+            }
+
+            .mLargeImage {
+                width: 80%;
+            }
+
+            .y-popular-item {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .footer-menu {
+                width: 100%;
+                float: none;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mTopDiv">
+        <div class="mTopInnerDivLeft">
+            <img src="./jordan_small.png">
+            <img src="./star.png">
+        </div>
+        <div class="mTopInnerDivRight">
+            <div class="mMenuDiv">
+                Find a Store
+            </div>
+            <div class="mMenuDiv">
+                Help
+            </div>
+            <div class="mMenuDiv">
+                Join Us
+            </div>
+            <div class="mMenuDiv">
+                Sign In
+            </div>
+        </div>
+
+    </div>
+    <div class="mMiddleDiv">
+        <div style="display: flex; width: 20%; height: 70%; margin-top: 2px;">
+            <img src="./logo.png">
+
+        </div>
+        <div style="display: flex; width: 60%; height: 70%; margin-top: 2px;  justify-content: center;">
+            <div class="mMenuMiddle">
+                New and Featured
+            </div>
+            <div class="mMenuMiddle">
+                Men
+            </div>
+            <div class="mMenuMiddle">
+                Women
+            </div>
+            <div class="mMenuMiddle">
+                Kids
+            </div>
+            <div class="mMenuMiddle">
+                Jordan
+            </div>
+            <div class="mMenuMiddle">
+                Sale
+            </div>
+
+
+        </div>
+        <div style="display: flex; width: 20%; height: 70%; margin-top: 2px;">
+            <div class="mSearch" ;>
+                <img src="./search.jpeg" class="mRoundImage">
+                <input type="text" class="mSearchText" placeholder="Search">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="mMarqueMenu" style="background-color:rgb(244,244,244);">
+        <div class="marquee-content">
+            <div class="marquee-text">Hi this CSS Assignment</div>
+            <div class="marquee-text">Gear up : Use Sport 25 </div>
+            <div class="marquee-text">Look for Store Pickup at Checkout</div>
+            <div class="marquee-text">Free shipping for member for purchasing more than $50.00 </div>
+
+        </div>
+
+    </div>
+
+    <div
+        style="width: 100%; text-align: center; height: 120px; margin-top: 40px; position: relative; overflow: hidden;">
+        <img src="./jordan_big.png" class="mJordanBig">
+
+    </div>
+    <div style="display: flex; width: 100%; height: 70%; margin-top: 2px;  justify-content: center;">
+        <div class="mMenuMiddle">
+            New Release
+        </div>
+        <div class="mMenuMiddle">
+            Jordan Basketball
+        </div>
+        <div class="mMenuMiddle">
+            Purpose & Community
+        </div>
+        <div class="mMenuMiddle">
+            Man
+        </div>
+        <div class="mMenuMiddle">
+            Women
+        </div>
+        <div class="mMenuMiddle">
+            Kids
+        </div>
+
+
+    </div>
+    <div style="display: flex; width: 100%;  margin-top: 20px;  justify-content: center;">
+        <img src="./shoe-1.png" class="mLargeImage">
+        <img src="./shoe-2.png" class="mLargeImage">
+
+    </div>
+
+    <div class="y-margin-bottom">
+        <a href="https://www.nike.com/w/jordan-basketball-37eefz3glsm">
+            <div style="text-align: center;" class="y-luka3">
+                <div>'PHOTO FINISH'</div>
+                <div>
+                    <h3>LUKA 3</h3>
+                </div>
+                <div style="margin-bottom: 10px;">This edition pairs bright colors and an ultra-clean silhouette
+                    with subtle racing details inspired by his love of luxurious speedsters and classic cars alike.
+                </div>
+                <div class="y-shop-button">Shop</div>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="y-advertise-1 y-margin-bottom"><a href="https://www.nike.com/w/jordan-heat-check-1n7xt"><img
+                src="jordan.jpg"></a></div>
+
+    <div class="y-margin-bottom">
+        <a href="https://www.nike.com/w/jordan-heat-check-1n7xt">
+            <div style="text-align: center;" class="y-luka3">
+                <div>‘WET CEMENT’</div>
+                <div>
+                    <h3>AIR JORDAN 4</h3>
+                </div>
+                <div style="margin-bottom: 10px;">A premium edition of the Air Jordan 4, featuring an all-over
+                    greyscale colorway inspired by the city’s cobblestone streets and an elevated material mix of
+                    nubuck leather and suede.</div>
+                <div class="y-comming-button">Comming Soon</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="y-popular-items">
+        <div class="y-popular-title y-margin-bottom">POPULAR RIGHT NOW</div>
+        <div class="y-popular-item">
+            <a href="https://www.nike.com/t/air-jordan-1-low-og-wolf-grey-shoes-WcxvLP/CZ0790-110"><img
+                    src="items/air-jordan-1.png"></a>
+            <h3>Air Jordan 1 Low OG "Wolf Grey"</h3>
+            <div>Shoes</div>
+            <div>$140</div>
+        </div>
+
+        <div class="y-popular-item">
+            <a href="https://www.nike.com/t/air-jordan-1-low-og-wolf-grey-big-kids-shoes-mC2SK3/CZ0858-110"><img
+                    src="items/air-jordan-2.png"></a>
+            <h3>Air Jordan 1 Low OG "Wolf Grey"</h3>
+            <div>Shoes</div>
+            <div>$145</div>
+        </div>
+        <div class="y-popular-item">
+            <a href="https://www.nike.com/t/air-jordan-3-retro-tex-desert-camo-womens-shoes-FMR3S0/HM4301-200"><img
+                    src="items/air-jordan-3.png"></a>
+            <h3>Air Jordan 1 Low OG "Wolf Grey"</h3>
+            <div>Shoes</div>
+            <div>$150</div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="footer">
+
+        <div style="border-bottom: 2px solid rgb(219, 217, 217);" class="y-margin-bottom"></div>
+
+        <div class="footer-menu" style="width: 24%; float: left;">
+
+            <div class="y-margin-bottom">Resources</div>
+            <div class="">Gift Cards</div>
+            <div class="">Find a Store</div>
+            <div class="">Membership</div>
+
+        </div>
+
+        <div class="footer-menu" style="width: 24%; float: left;">
+
+            <div class="y-margin-bottom">Help</div>
+            <div class="">Get Help</div>
+            <div class="">Order Status</div>
+            <div class="">Shipping and Delivery</div>
+
+        </div>
+
+        <div class="footer-menu" style="width: 24%; float: left;">
+
+            <div class="y-margin-bottom">Company</div>
+            <div class="">About Nike</div>
+            <div class="">News</div>
+            <div class="">Careers</div>
+
+        </div>
+
+        <div class="footer-menu y-margin-bottom" style="width: 24%; float: left;">
+
+            <div class="y-margin-bottom">Promotion &amp; Discounts</div>
+            <div class="">Student</div>
+            <div class="">Military</div>
+            <div class="">Teacher</div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
